@@ -1,6 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { default: context } = require('react-bootstrap/esm/AccordionContext');
-const { User, Book } = require('../models');
+// const { default: context } = require('react-bootstrap/esm/AccordionContext');
+const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -47,14 +47,14 @@ const resolvers = {
           }
         );
       },
-      removeBook: async (parent, { UserId, book }) => {
-        if (context.user){
-        return User.findOneAndUpdate(
-          { _id: UserId },
-          { $pull: { books: book } },
-          { new: true }
-        )};
-      },
+      // removeBook: async (parent, { UserId, book }) => {
+      //   if (context.user){
+      //   return User.findOneAndUpdate(
+      //     { _id: UserId },
+      //     { $pull: { books: book } },
+      //     { new: true }
+      //   )};
+      // },
     },
   };
 

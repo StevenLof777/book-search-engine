@@ -1,17 +1,11 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_THOUGHTS = gql`
-  # create a GraphQL query to be executed by Apollo Client
-  query getThoughts {
-    thoughts {
+export const GET_ME = gql`
+  query me {
+    me {
       _id
-      thoughtText
-      thoughtAuthor
-      createdAt
+    name
     }
   }
-
-  type Query {
-    me: User
-  }
 `;
+
