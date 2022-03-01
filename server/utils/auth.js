@@ -26,7 +26,7 @@ module.exports = {
     }
 
     // send to next endpoint
-    return req
+    return req;
   },
   signToken: function ({ email, name, _id }) {
     const payload = { email, name, _id };
