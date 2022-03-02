@@ -12,7 +12,8 @@ const SignupForm = () => {
       email: '',
        password: '' 
   });
-  const [addUser, { error, data }] = useMutation(ADD_USER);
+  // const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [addUser] = useMutation(ADD_USER);
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert
@@ -110,11 +111,11 @@ const SignupForm = () => {
           Submit
         </Button>
       </Form>
-      {error && (
+      {/* {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}
               </div>
-            )}
+            )} */}
     </>
   );
 };
