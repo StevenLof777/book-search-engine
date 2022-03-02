@@ -48,14 +48,14 @@ const resolvers = {
           }
         );
       },
-      // removeBook: async (parent, { UserId, book }) => {
-      //   if (context.user){
-      //   return User.findOneAndUpdate(
-      //     { _id: UserId },
-      //     { $pull: { books: book } },
-      //     { new: true }
-      //   )};
-      // },
+      removeBook: async (parent, { UserId, book }, context) => {
+        if (context.user){
+        return User.findOneAndUpdate(
+          { _id: UserId },
+          { $pull: { books: book } },
+          { new: true }
+        )};
+      },
     },
   };
 
