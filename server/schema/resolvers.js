@@ -6,6 +6,8 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
     Query: {
       me: async (parent, args, context) => {
+        console.log("bruhhhhh")
+        console.log(context)
         if (!context.user){
           throw new AuthenticationError('Not logged in')
         }
@@ -15,6 +17,7 @@ const resolvers = {
   
     Mutation: {
       addUser: async (parent, { username, email, password }) => {
+        console.log("bruhhhhh")
         const user = await User.create({ username, email, password });
         const token = signToken(user);
         return { token, user };
