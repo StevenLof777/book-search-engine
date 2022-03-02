@@ -14,5 +14,5 @@ SO THAT I can keep a list of books to purchase
 
 ## Mock-Up
 
-![The Viewing Lernantino's Books page shows the books that the user Lernaninto has saved.](./Assets/21-mern-homework-demo-03.gif)
+![Book Search App](./Assets/book-search.PNG)
 
